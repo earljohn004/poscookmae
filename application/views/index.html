@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>COOK MAE</title>
-		<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js" ></script> 
+		<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js" ></script> 
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="screen">
 	</head>
 	<body>
@@ -12,8 +12,7 @@
 			<h1>COOK MAE P.O.S</h1>	
 		</div>
 		<div class="container-fluid">
-
-			<div class="row">
+			<div class="row" id="row_testing">
 				<div class="col-sm-3">
 					 <button id="button_new_order" style="height:100px" class="btn btn-block btn-success btn-lg">NEW ORDER</button>
 			   	</div>
@@ -21,7 +20,7 @@
 					<!-- Internal row for Pricing -->
 					<div class="row">
 						<div class="col-sm-3"> <h3> Summary </h3> </div>
-						<div class="col-sm-6">
+						<div class="col-sm-6"style="height: 150px; overflow-y: scroll">
 							<table class="table table-fixed table-striped">
 								<thead>
 									<tr>
@@ -29,79 +28,115 @@
 										<th scope="col"> Price </th>
 									</tr>
 								</thead>
-								 
 								<tbody id="span_summary_purchase">
-									<tr><td>Item A</td><td>Price A</td></tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
-									<tr><td>Item A</td><td>Price A</td> </tr>
 								</tbody>
 							</table>
 						</div>
-						<div class="col-sm-3"> <h2> <span id="span_summary_total" class="text-warning"> PHP 100.00 </span> </h2> </div>
+						<div class="col-sm-3" style="text-center"><h2><p>Total</p></h2> <h2><span id="span_summary_total" class="text-warning">0.00</span> </h2> </div>
 					</div>
 			   	</div>
 				<div class="col-sm-3">
 					 <button id="button_record_db" style="height:100px" class="btn btn-block btn-danger btn-lg">RECORD</button>
 			   	</div>
 			</div>
-			<br></br>
-			<br></br>
-			<!-- <div>  -->
-			<!-- 	<h3 class="text&#45;center text&#45;warning">List of Products</h3>	 -->
-			<!-- </div> -->
-			<!-- ROW 2 -->
-		<div class="row">
+			<!-- END OF ROW -->
+			<hr></hr>
+		<div class="container-fluid" style="height: 300px; overflow-y: scroll">
+		<div class="row" id="row_products_1">
 			 <div class="col-sm-2">
 			 <div class="thumbnail">
-				 <img src="assets/images/FD1.png" alt="Flash Drive 1" style="width:100%">
-				 <button id="testBtn" style="height:100px" class="btn btn-block btn-warning btn-lg">A</button>
-				 <h4 class="text-center"> Php 7.00 </h4>
+				 <h4 class="text-center" id="name_image0">Item 0</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image0"></input>
+				 <h4 class="text-center" id="image0_price"> Php 8.00 </h4>
 		   	 </div>
 			 </div>
 
 			 <div class="col-sm-2">
 			 <div class="thumbnail">
-				 <img src="assets/images/FD2.png" alt="Flash Drive 1" style="width:100%">
-				 <button id="myBtn2" style="height:100px" class="btn btn-block btn-warning btn-lg">B</button>
+				 <h4 class="text-center" id="name_image1">Item 1</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image1"></input>
+				 <h4 class="text-center" id="image1_price"> Php 9.00 </h4>
 		   	 </div>
 			 </div>
 			 <div class="col-sm-2">
 			 <div class="thumbnail">
-				 <img src="assets/images/FD3.png" alt="Flash Drive 1" style="width:100%">
-				 <button id="myBtn3" style="height:100px" class="btn btn-block btn-warning btn-lg">C</button>
+				 <h4 class="text-center" id="name_image2">Item 2</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image2"></input>
+				 <h4 class="text-center" id="image2_price"> Php 10.00 </h4>
 		   	 </div>
 			 </div>
 			 <div class="col-sm-2">
 			 <div class="thumbnail">
-				 <img src="assets/images/FD3.png" alt="Flash Drive 1" style="width:100%">
-				 <button id="myBtn4" style="height:100px"class="btn btn-block btn-warning btn-lg">D</button>
+				 <h4 class="text-center" id="name_image3">Item 3</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image3"></input>
+				 <h4 class="text-center" id="image3_price"> Php 11.00 </h4>
 		   	 </div>
 			 </div>
 			 <div class="col-sm-2">
 			 <div class="thumbnail">
-				 <img src="assets/images/FD3.png" alt="Flash Drive 1" style="width:100%">
-				 <button id="myBtn5" style="height:100px" class="btn btn-block btn-warning btn-lg">E</button>
+				 <h4 class="text-center" id="name_image4">Item 4</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image4"></input>
+				 <h4 class="text-center" id="image4_price"> Php 12.00 </h4>
+		   	 </div>
+			 </div>
+			 <div class="col-sm-2">
+			 <div class="thumbnail">
+				 <h4 class="text-center" id="name_image5">Item 5</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image5"></input>
+				 <h4 class="text-center" id="image5_price"> Php 13.00 </h4>
+		   	 </div>
+			 </div>
+		 </div> 
+		<!-- END OF ROW 1  -->
+		<!-- START OF ROW 2  -->
+		<div class="row" id="row_products_1">
+			 <div class="col-sm-2">
+			 <div class="thumbnail">
+				 <h4 class="text-center" id="name_image0">Item 0</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image0"></input>
+				 <h4 class="text-center" id="image0_price"> Php 8.00 </h4>
 		   	 </div>
 			 </div>
 
 			 <div class="col-sm-2">
 			 <div class="thumbnail">
-				 <img src="assets/images/FD3.png" alt="Flash Drive 1" style="width:100%">
-				 <button id="myBtn5" class="btn btn-block btn-warning btn-lg" style="height:100px">F</button>
+				 <h4 class="text-center" id="name_image1">Item 1</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image1"></input>
+				 <h4 class="text-center" id="image1_price"> Php 9.00 </h4>
 		   	 </div>
 			 </div>
-		 </div>
+			 <div class="col-sm-2">
+			 <div class="thumbnail">
+				 <h4 class="text-center" id="name_image2">Item 2</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image2"></input>
+				 <h4 class="text-center" id="image2_price"> Php 10.00 </h4>
+		   	 </div>
+			 </div>
+			 <div class="col-sm-2">
+			 <div class="thumbnail">
+				 <h4 class="text-center" id="name_image3">Item 3</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image3"></input>
+				 <h4 class="text-center" id="image3_price"> Php 11.00 </h4>
+		   	 </div>
+			 </div>
+			 <div class="col-sm-2">
+			 <div class="thumbnail">
+				 <h4 class="text-center" id="name_image4">Item 4</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image4"></input>
+				 <h4 class="text-center" id="image4_price"> Php 12.00 </h4>
+		   	 </div>
+			 </div>
+			 <div class="col-sm-2">
+			 <div class="thumbnail">
+				 <h4 class="text-center" id="name_image5">Item 5</h4>
+				 <input type="image" src="assets/images/CornedBeef.jpg" style="width:100%" id="image5"></input>
+				 <h4 class="text-center" id="image5_price"> Php 13.00 </h4>
+		   	 </div>
+			 </div>
+		 </div> 
+		<!--  END OF ROW 2 -->
 		</div>
-      
+		</div>
 	</div>
   </div> 
 
@@ -112,21 +147,58 @@
 
 	<script type="text/javascript">
 
+		var integer_totalPrice = 0;
+
 		$(document).ready(function(){
 			console.log("hello world!");
 		});
 
-		$("#testBtn").click(function(){
-			var item_name="Beefloaf";
-			var item_price="10.00";
-			console.log("You have selected Button A");
-			$("#span_summary_purchase").append("<tr><td>"+ item_name + "</td><td>" + item_price +"</td></tr>");
-			$("#span_summary_prices").append("<p>" + item_price + "</p>");
+		$("input").click(function(){
+			var item_price=$(this).next().text();
+			var integer_item_price=$(this).next().text().match(/\d+/);
+			var item_name=$(this).prev().text();
+			solve(integer_item_price);
+			$("#span_summary_purchase").append("<tr><td>" + item_name + "</td>" + "<td>" + item_price + "</td></tr>");
 		});
 
+		function display(){
+			$("#span_summary_total").text(integer_totalPrice + ".00");
+		}
+
+		function solve(a){
+			console.log(integer_totalPrice + a );
+			integer_totalPrice = parseFloat(integer_totalPrice) + parseFloat(a);
+			display();
+		};
+
 		$("#button_new_order").click(function(){
-			$("#span_summary_purchase").html("<tr><td>Item A</td><td>Price A</td> </tr>");
+			$("#span_summary_purchase").html("");
+			integer_totalPrice=0;
+			display();
 		});
+		
+		$("#button_record_db").click(function(){
+
+			var name="TestName";
+			var price=1000;
+			var data_date="2018/08/17";
+			var data_time="08:59:59";
+
+			$.ajax({
+				// url:"<?php echo base_url();?>"+"index.php/main/record_on_database",
+				url:"<?php echo base_url();?>"+"index.php/main/record_on_database",
+				type:"POST",
+				dataType:'json',
+				data:{
+					product_name:name,
+					product_price:price,
+					data_date:data_date,
+					data_time:data_time
+				}
+			});
+			console.log("finished processing ajax");
+		});
+
 	</script>
 
 </html>
